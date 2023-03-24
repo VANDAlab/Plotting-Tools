@@ -12,18 +12,17 @@ function Plotting_Brains(fdr_region,t_region,mode,model,transparency,mymin,mymax
 % mymin: minimum range of t_region values
 % mymax: maximum range of t_region values
 
-% [~,icbm_sym]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_sym_09c_minc2/mni_icbm152_t1_tal_nlin_sym_09c.mnc');
-% [~,icbm_sym_mask]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_sym_09c_minc2/mni_icbm152_t1_tal_nlin_sym_09c_mask.mnc');
-% 
-% [~,icbm_asym]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_asym_09c_minc2/mni_icbm152_t1_tal_nlin_asym_09c.mnc');
-% [~,icbm_asym_mask]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_asym_09c_minc2/mni_icbm152_t1_tal_nlin_asym_09c_mask.mnc');
-% 
-% [~,adni]=niak_read_minc('/opt/quarantine/resources/adni_model_3d_v2/model_t1w.mnc');
-% [~,adni_mask]=niak_read_minc('/opt/quarantine/resources/adni_model_3d_v2/model_t1w_mask.mnc');
-% 
-% [~,Allen_sym]=niak_read_minc('/data/zeiyas/tools/models/mni_icbm152_nlin_sym_09b_minc2_allen/mni_icbm152_t1_tal_nlin_sym_09b_labels.mnc');
+ [~,icbm_sym]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_sym_09c_minc2/mni_icbm152_t1_tal_nlin_sym_09c.mnc');
+ [~,icbm_sym_mask]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_sym_09c_minc2/mni_icbm152_t1_tal_nlin_sym_09c_mask.mnc');
+ 
+ [~,icbm_asym]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_asym_09c_minc2/mni_icbm152_t1_tal_nlin_asym_09c.mnc');
+ [~,icbm_asym_mask]=niak_read_minc('/opt/quarantine/resources/mni_icbm152_nlin_asym_09c_minc2/mni_icbm152_t1_tal_nlin_asym_09c_mask.mnc');
+ 
+ [~,adni]=niak_read_minc('/opt/quarantine/resources/adni_model_3d_v2/model_t1w.mnc');
+ [~,adni_mask]=niak_read_minc('/opt/quarantine/resources/adni_model_3d_v2/model_t1w_mask.mnc');
+ 
+ [~,Allen_sym]=niak_read_minc('/data/zeiyas/tools/models/mni_icbm152_nlin_sym_09b_minc2_allen/mni_icbm152_t1_tal_nlin_sym_09b_labels.mnc');
 
-load Atlases
 switch model
     case 'icbm_sym'
         Template=icbm_sym;
