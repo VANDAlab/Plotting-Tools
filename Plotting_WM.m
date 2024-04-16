@@ -17,12 +17,12 @@ function Plotting_WM(fdr_region_significant,t_region,slice,coordinate,subplot_ti
 % 3: left temporal lobe
 % 4: right temporal lobe
 % 5: left parietal lobe
-% 6: right pariental lobe
+% 6: right parietal lobe
 % 7: left cerebellum
 % 8: right cerebellum
-% 9: brainstem
-% 10: left occipital lobe
-% 11: right occipital lobe
+% 9: left occipital lobe
+% 10: right occipital lobe
+% 11: brainstem
 load Atlas_WM.mat % loads Hammers WM and ICBM information
 Indices=find(brain_mask>0);
 %% checks which regions are significant, and only plots those, leaving the others empty
@@ -36,8 +36,8 @@ for i=1:11
 end
 %% plot visualization characteristics 
 transparency=0.6; % transparency of the colors overlaid on ICBM, change if necessary
-mymin=-1; % min range value of the t-stats, change if necessary
-mymax=1; % max range value of the t-stats, change if necessary
+mymin=-3; % min range value of the t-stats, change if necessary
+mymax=3; % max range value of the t-stats, change if necessary
 % you can also change the colormap from jet to other maps from: https://www.mathworks.com/help/matlab/ref/colormap.html
 %% this section basically grabs the indicated slice, and overlays it on the corresponding ICBM slice
 Template(brain_mask==0)=10000;
